@@ -14,7 +14,7 @@ if [[ -d "$2" ]]; then
 	cd $2
 	mkdir _temp$2
 elif [[ -f "$2" ]]; then
-	echo "[ERR] Specified output directory arleady exists and is a file!"
+	echo "[ERR] Specified output directory already exists and is a file!"
 	exit 1
 elif [[ ! -e "$2" ]]; then
 	mkdir _temp$2
@@ -44,7 +44,7 @@ while read p; do
 		continue
 	fi
 	if [[ "$cfile" == "" ]]; then
-		echo "[ERR] Archive error: no output file is specified at start of file!"
+		echo "[ERR] Archive error: no output file is specified at start of the file!"
 		_exit
 	fi
 	echo "$p" >> $cfile
